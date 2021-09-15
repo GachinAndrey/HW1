@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 3</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        /*Вывести в консоль значения выражений и объяснить почему получились 
+        такие значения используя комментарии к каждому выражению:
+         10 + 10 + "10";
+         10 + "10" + 10; 
+         10 + 10 + +"10"; 
+         (обратите внимание на пробелы, пишите также) 10 / -""; 
+         10 / +"2,5"; (да здесь запятая, это не опечатка)
+         */
+
+        let result1 = 10 + 10 + "10";
+        let result2 = 10 + "10" + 10;
+        let result3 = 10 + 10 + +"10";
+        let result4 = 10 / -"";
+        let result5 = 10 / +"2,5";
+
+        console.log(result1);
+        // result1 строка 2010  (10 прибавляем 10 равно 20 и прибавляем строку 10)
+
+        console.log(result2);
+        // result2 строка 101010 (10 прибавляем строку 10 и прибавляем 10)
+
+        console.log(result3);
+        // result3 число 30 (10 прибавляем 10 и унарный + переводит строку 10 в число +10)
+
+        console.log(result4);
+        // result4 -Infinity (унарный минус превращает пробел в число -0, делить на 0 нельзя, получаем  минус бесконечность )
+
+        console.log(result5);
+        // result5 NaN(не число) (унарный плюс не может перевести строку 2,5 в число и вместо числа получается NaN или не число, 10 делим на NaN получаем NaN )
+
+    </script>
+
+</body>
+
+</html>
